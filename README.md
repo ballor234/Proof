@@ -65,3 +65,9 @@ Características principales:
 - Transferibles
 - Aprobaciones (approve)
 - Balance consultable
+
+- ### Oráculos en blockchain
+
+Los oráculos traen datos del mundo real (precios, resultados deportivos, clima, etc.) a los contratos inteligentes.
+
+En Base se pueden usar Chainlink y otros oráculos compatibles.
