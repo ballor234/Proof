@@ -31,3 +31,12 @@ Ya tengo la red configurada y lista para usar.
 - Trust Wallet → Simple para principiantes
 
 Cada una tiene sus ventajas según lo que quieras hacer.
+
+### Cómo verificar un contrato en Blockscout (Base)
+
+Después de desplegar es importante verificar el código fuente para que sea transparente.
+
+Pasos básicos:
+- Ir a Blockscout
+- Buscar el contrato
+- Subir el código fuente y metadata
