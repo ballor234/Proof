@@ -49,3 +49,10 @@ Pasos básicos:
 - Aprobaciones (approve)
 
 Cada una tiene un costo de gas diferente.
+
+### Diferencias clave Base vs Ethereum Mainnet
+
+- Fees: Base es mucho más barato
+- Velocidad: Confirmaciones más rápidas en Base
+- Seguridad: Base hereda seguridad de Ethereum
+- Uso: Base es mejor para experimentar y dApps diarias
