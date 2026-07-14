@@ -80,3 +80,10 @@ En Base se pueden usar Chainlink y otros oráculos compatibles.
 4. Puedes retirar en la otra dirección
 
 Siempre verificar el bridge oficial.
+
+### Remix IDE como herramienta inicial
+
+Remix es un editor online perfecto para empezar con Solidity:
+- No requiere instalación
+- Permite compilar y desplegar directamente
+- Ideal para pruebas rápidas en Base
