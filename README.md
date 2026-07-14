@@ -71,3 +71,12 @@ Características principales:
 Los oráculos traen datos del mundo real (precios, resultados deportivos, clima, etc.) a los contratos inteligentes.
 
 En Base se pueden usar Chainlink y otros oráculos compatibles.
+
+### Cómo funciona un bridge paso a paso
+
+1. Depositas fondos en la red origen
+2. El bridge bloquea o quema los fondos
+3. Se emiten los fondos equivalentes en Base
+4. Puedes retirar en la otra dirección
+
+Siempre verificar el bridge oficial.
