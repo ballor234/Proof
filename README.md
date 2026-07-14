@@ -40,3 +40,12 @@ Pasos básicos:
 - Ir a Blockscout
 - Buscar el contrato
 - Subir el código fuente y metadata
+
+### Tipos de transacciones comunes en Base
+
+- Transferencias simples de ETH o tokens
+- Interacción con contratos (swaps, mint, etc.)
+- Despliegue de contratos
+- Aprobaciones (approve)
+
+Cada una tiene un costo de gas diferente.
