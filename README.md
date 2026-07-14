@@ -56,3 +56,12 @@ Cada una tiene un costo de gas diferente.
 - Velocidad: Confirmaciones más rápidas en Base
 - Seguridad: Base hereda seguridad de Ethereum
 - Uso: Base es mejor para experimentar y dApps diarias
+
+- ### Introducción a los tokens ERC-20
+
+Los ERC-20 son el estándar más común para crear tokens fungibles en Base (como stablecoins o tokens de proyectos).
+
+Características principales:
+- Transferibles
+- Aprobaciones (approve)
+- Balance consultable
