@@ -93,3 +93,25 @@ Remix es un editor online perfecto para empezar con Solidity:
 Chainlink es un oráculo descentralizado que proporciona datos confiables a los contratos inteligentes (precios, randomness, etc.).
 
 Es muy usado en Base y otras L2s.
+
+### Contrato Counter simple (primer experimento)
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract Counter {
+    uint256 public count = 0;
+
+    function increment() public {
+        count += 1;
+    }
+
+    function decrement() public {
+        count -= 1;
+    }
+
+    function reset() public {
+        count = 0;
+    }
+}
