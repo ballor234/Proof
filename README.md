@@ -87,3 +87,9 @@ Remix es un editor online perfecto para empezar con Solidity:
 - No requiere instalación
 - Permite compilar y desplegar directamente
 - Ideal para pruebas rápidas en Base
+
+- ### Introducción a Chainlink
+
+Chainlink es un oráculo descentralizado que proporciona datos confiables a los contratos inteligentes (precios, randomness, etc.).
+
+Es muy usado en Base y otras L2s.
