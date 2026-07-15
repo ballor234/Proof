@@ -139,3 +139,18 @@ main().catch((error) => {
   console.error(error);
   process.exit(1);
 });
+
+**Mensaje:** `docs: frontend básico para interactuar con Counter`
+
+**Texto para añadir:**
+
+```markdown
+### Frontend básico para interactuar con el Counter
+
+```html
+<button onclick="increment()">Incrementar</button>
+<p>Contador: <span id="value">0</span></p>
+
+<script>
+  // Código con ethers.js para llamar al contrato en Base
+</script>
