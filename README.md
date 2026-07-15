@@ -214,3 +214,19 @@ modifier whenNotPaused() {
 function pause() public onlyOwner {
     paused = true;
 }
+
+### Contrato de staking simple
+
+```solidity
+contract SimpleStake {
+    mapping(address => uint256) public stakedAmount;
+    uint256 public rewardRate = 100; // ejemplo
+
+    function stake(uint256 amount) public {
+        // lógica de stake
+    }
+
+    function claimReward() public {
+        // lógica de rewards
+    }
+}
