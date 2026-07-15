@@ -230,3 +230,18 @@ contract SimpleStake {
         // lógica de rewards
     }
 }
+
+### Contrato con función pausable
+
+```solidity
+import "@openzeppelin/contracts/security/Pausable.sol";
+
+contract MyContract is Pausable {
+    function emergencyPause() public onlyOwner {
+        _pause();
+    }
+
+    function normalFunction() public whenNotPaused {
+        // lógica normal
+    }
+}
