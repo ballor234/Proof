@@ -203,3 +203,14 @@ contract Owned {
         owner = newOwner;
     }
 }
+### Contrato con modifier personalizado
+
+```solidity
+modifier whenNotPaused() {
+    require(!paused, "Contract is paused");
+    _;
+}
+
+function pause() public onlyOwner {
+    paused = true;
+}
