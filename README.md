@@ -115,3 +115,27 @@ contract Counter {
         count = 0;
     }
 }
+
+**Mensaje:** `docs: script de despliegue básico con Hardhat`
+
+**Texto para añadir:**
+
+```markdown
+### Script de despliegue básico (Hardhat)
+
+```javascript
+// deploy.js
+const hre = require("hardhat");
+
+async function main() {
+  const Counter = await hre.ethers.getContractFactory("Counter");
+  const counter = await Counter.deploy();
+
+  await counter.deployed();
+  console.log("Counter desplegado en:", counter.address);
+}
+
+main().catch((error) => {
+  console.error(error);
+  process.exit(1);
+});
