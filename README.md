@@ -245,3 +245,13 @@ contract MyContract is Pausable {
         // lógica normal
     }
 }
+
+### Función de withdraw segura
+
+```solidity
+function withdraw() public {
+    uint256 amount = balances[msg.sender];
+    require(amount > 0, "No balance");
+    balances[msg.sender] = 0;
+    payable(msg.sender).transfer(amount);
+}
