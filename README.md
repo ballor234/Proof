@@ -154,3 +154,12 @@ main().catch((error) => {
 <script>
   // Código con ethers.js para llamar al contrato en Base
 </script>
+
+### Idea de mejora al Counter
+
+Añadir:
+- Eventos cuando se modifica el contador
+- Ownership (solo owner puede resetear)
+- Contador por usuario
+
+Esto lo haría más útil como proyecto de práctica.
