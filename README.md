@@ -281,3 +281,13 @@ contract RoleBased is AccessControl {
         _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
     }
 }
+### Fallback y receive functions
+
+```solidity
+receive() external payable {
+    // se ejecuta al recibir ETH directo
+}
+
+fallback() external {
+    // se ejecuta cuando no hay función que coincida
+}
