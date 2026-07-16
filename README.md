@@ -268,3 +268,16 @@ function withdraw() public {
     require(block.timestamp >= unlockTime, "Still locked");
     // withdraw logic
 }
+
+### Uso de AccessControl (roles)
+
+```solidity
+import "@openzeppelin/contracts/access/AccessControl.sol";
+
+contract RoleBased is AccessControl {
+    bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
+
+    constructor() {
+        _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
+    }
+}
