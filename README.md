@@ -255,3 +255,16 @@ function withdraw() public {
     balances[msg.sender] = 0;
     payable(msg.sender).transfer(amount);
 }
+### Función con timelock
+
+```solidity
+uint256 public unlockTime;
+
+function lockFunds() public {
+    unlockTime = block.timestamp + 7 days; // 7 días
+}
+
+function withdraw() public {
+    require(block.timestamp >= unlockTime, "Still locked");
+    // withdraw logic
+}
