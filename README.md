@@ -291,3 +291,14 @@ receive() external payable {
 fallback() external {
     // se ejecuta cuando no hay función que coincida
 }
+
+### Funciones view y pure
+
+```solidity
+function getBalance() public view returns (uint256) {
+    return address(this).balance;
+}
+
+function add(uint256 a, uint256 b) public pure returns (uint256) {
+    return a + b;
+}
