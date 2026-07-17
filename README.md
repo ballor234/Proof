@@ -302,3 +302,14 @@ function getBalance() public view returns (uint256) {
 function add(uint256 a, uint256 b) public pure returns (uint256) {
     return a + b;
 }
+
+### Uso de Structs
+
+```solidity
+struct User {
+    uint256 id;
+    string name;
+    uint256 balance;
+}
+
+mapping(address => User) public users;
