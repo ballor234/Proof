@@ -479,3 +479,17 @@ function _transfer(...) internal override {
     require(balanceOf[to] + amount <= maxWalletSize, "Exceeds max wallet");
     super._transfer(...);
 }
+
+### Tax dinámico
+
+```solidity
+uint256 public currentTax = 10;
+
+function setTax(uint256 newTax) public onlyOwner {
+    currentTax = newTax;
+}
+
+function _transfer(...) {
+    uint256 tax = amount * currentTax / 100;
+    // apply tax
+}
