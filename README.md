@@ -401,3 +401,14 @@ function action() public {
 function verifySignature(address signer, bytes32 hash, bytes memory signature) internal pure returns (bool) {
     // lógica de verificación
 }
+
+### Uso básico de Chainlink VRF
+
+```solidity
+import "@chainlink/contracts/src/v0.8/VRFConsumerBaseV2.sol";
+
+contract RandomNumber is VRFConsumerBaseV2 {
+    function requestRandomWords() external {
+        // solicitud de número aleatorio
+    }
+}
