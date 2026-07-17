@@ -346,3 +346,13 @@ fallback() external payable {
     // lógica para manejar llamadas no reconocidas
     emit FallbackCalled(msg.sender, msg.value);
 }
+
+### Operaciones en batch (múltiples)
+
+```solidity
+function batchTransfer(address[] calldata recipients, uint256[] calldata amounts) public {
+    require(recipients.length == amounts.length, "Length mismatch");
+    for (uint i = 0; i < recipients.length; i++) {
+        // transfer logic
+    }
+}
