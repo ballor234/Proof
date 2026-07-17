@@ -459,3 +459,13 @@ function _burn(address account, uint256 amount) internal {
     balanceOf[account] -= amount;
     emit Transfer(account, address(0), amount);
 }
+
+### Mecanismo de reflection básico
+
+```solidity
+uint256 public reflectionRate = 100;
+
+function _transfer(...) internal {
+    uint256 reflection = amount * reflectionRate / 1000;
+    // distribuir a holders
+}
