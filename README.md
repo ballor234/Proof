@@ -338,3 +338,11 @@ interface IERC20 {
 contract MyContract {
     IERC20 public token;
 }
+
+### Fallback avanzado
+
+```solidity
+fallback() external payable {
+    // lógica para manejar llamadas no reconocidas
+    emit FallbackCalled(msg.sender, msg.value);
+}
