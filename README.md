@@ -373,3 +373,13 @@ contract SimpleRaffle {
         winner = participants[index];
     }
 }
+
+### Sistema de referrals básico
+
+```solidity
+mapping(address => address) public referrer;
+
+function register(address _referrer) public {
+    referrer[msg.sender] = _referrer;
+    // dar reward al referrer
+}
