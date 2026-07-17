@@ -430,3 +430,11 @@ contract PriceConsumer {
         return price;
     }
 }
+
+### Lógica de limit buy/sell
+
+```solidity
+function buyWithLimit(uint256 maxPrice) public payable {
+    require(getCurrentPrice() <= maxPrice, "Price too high");
+    // execute buy
+}
