@@ -412,3 +412,21 @@ contract RandomNumber is VRFConsumerBaseV2 {
         // solicitud de número aleatorio
     }
 }
+
+### Uso de Chainlink Price Feed
+
+```solidity
+import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
+
+contract PriceConsumer {
+    AggregatorV3Interface internal priceFeed;
+
+    constructor() {
+        priceFeed = AggregatorV3Interface(0x...); // address en Base
+    }
+
+    function getPrice() public view returns (int256) {
+        (,int256 price,,,) = priceFeed.latestRoundData();
+        return price;
+    }
+}
