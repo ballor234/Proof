@@ -394,3 +394,10 @@ function action() public {
     lastAction[msg.sender] = block.timestamp;
     // acción
 }
+
+### Verificación de firma (EIP-712)
+
+```solidity
+function verifySignature(address signer, bytes32 hash, bytes memory signature) internal pure returns (bool) {
+    // lógica de verificación
+}
