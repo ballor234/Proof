@@ -446,3 +446,16 @@ function _transfer(address from, address to, uint256 amount) internal override {
     super._transfer(from, address(this), tax);
     super._transfer(from, to, amount - tax);
 }
+
+### Burn mechanism
+
+```solidity
+function burn(uint256 amount) public {
+    _burn(msg.sender, amount);
+}
+
+function _burn(address account, uint256 amount) internal {
+    totalSupply -= amount;
+    balanceOf[account] -= amount;
+    emit Transfer(account, address(0), amount);
+}
