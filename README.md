@@ -356,3 +356,20 @@ function batchTransfer(address[] calldata recipients, uint256[] calldata amounts
         // transfer logic
     }
 }
+### Contrato Raffle simple
+
+```solidity
+contract SimpleRaffle {
+    address[] public participants;
+    address public winner;
+
+    function enter() public payable {
+        participants.push(msg.sender);
+    }
+
+    function pickWinner() public {
+        // lógica simple de random (mejorar con Chainlink VRF en producción)
+        uint256 index = block.timestamp % participants.length;
+        winner = participants[index];
+    }
+}
