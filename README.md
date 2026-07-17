@@ -326,3 +326,15 @@ contract ChildContract is BaseContract {
         value = _value;
     }
 }
+
+### Uso de Interfaces
+
+```solidity
+interface IERC20 {
+    function transfer(address to, uint256 amount) external returns (bool);
+    function balanceOf(address account) external view returns (uint256);
+}
+
+contract MyContract {
+    IERC20 public token;
+}
