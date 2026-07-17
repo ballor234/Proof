@@ -438,3 +438,11 @@ function buyWithLimit(uint256 maxPrice) public payable {
     require(getCurrentPrice() <= maxPrice, "Price too high");
     // execute buy
 }
+### Token con tax on transfer
+
+```solidity
+function _transfer(address from, address to, uint256 amount) internal override {
+    uint256 tax = amount * 5 / 100;
+    super._transfer(from, address(this), tax);
+    super._transfer(from, to, amount - tax);
+}
