@@ -383,3 +383,14 @@ function register(address _referrer) public {
     referrer[msg.sender] = _referrer;
     // dar reward al referrer
 }
+
+### Función con cooldown
+
+```solidity
+mapping(address => uint256) public lastAction;
+
+function action() public {
+    require(block.timestamp > lastAction[msg.sender] + 1 days, "Cooldown active");
+    lastAction[msg.sender] = block.timestamp;
+    // acción
+}
