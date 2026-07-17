@@ -313,3 +313,16 @@ struct User {
 }
 
 mapping(address => User) public users;
+
+### Herencia en Solidity
+
+```solidity
+contract BaseContract {
+    uint256 public value;
+}
+
+contract ChildContract is BaseContract {
+    function setValue(uint256 _value) public {
+        value = _value;
+    }
+}
