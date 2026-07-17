@@ -469,3 +469,13 @@ function _transfer(...) internal {
     uint256 reflection = amount * reflectionRate / 1000;
     // distribuir a holders
 }
+
+### Max wallet limit
+
+```solidity
+uint256 public maxWalletPercent = 2; // 2% del supply
+
+function _transfer(...) internal override {
+    require(balanceOf[to] + amount <= maxWalletSize, "Exceeds max wallet");
+    super._transfer(...);
+}
