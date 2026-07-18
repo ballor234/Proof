@@ -569,3 +569,18 @@ Usando OpenZeppelin upgrades.
 function sendCrossChain(...) public payable {
     // enviar mensaje a otra chain
 }
+
+### Governance básico (timelock + voting)
+
+```solidity
+contract SimpleGovernance {
+    uint256 public proposalCount;
+    mapping(uint256 => Proposal) public proposals;
+
+    struct Proposal {
+        string description;
+        uint256 voteFor;
+        uint256 voteAgainst;
+        uint256 endTime;
+    }
+}
