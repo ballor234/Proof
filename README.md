@@ -544,3 +544,14 @@ import "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol";
 function mintWhitelist(bytes32[] calldata proof) public {
     require(MerkleProof.verify(proof, merkleRoot, keccak256(abi.encodePacked(msg.sender))), "Not whitelisted");
 }
+
+### Soporte de royalties ERC2981
+
+```solidity
+import "@openzeppelin/contracts/token/common/ERC2981.sol";
+
+contract MyNFT is ERC721, ERC2981 {
+    function royaltyInfo(uint256 tokenId, uint256 salePrice) public view override returns (address, uint256) {
+        return (royaltyReceiver, (salePrice * 5) / 100); // 5%
+    }
+}
