@@ -526,3 +526,12 @@ modifier notBlacklisted(address account) {
     require(!isBlacklisted[account], "Blacklisted");
     _;
 }
+
+### Snapshot de balances
+
+```solidity
+mapping(uint256 => mapping(address => uint256)) public balanceAtSnapshot;
+
+function takeSnapshot() public {
+    // guarda balances en un ID de snapshot
+}
