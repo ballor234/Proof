@@ -535,3 +535,12 @@ mapping(uint256 => mapping(address => uint256)) public balanceAtSnapshot;
 function takeSnapshot() public {
     // guarda balances en un ID de snapshot
 }
+
+### Merkle Proof para whitelist
+
+```solidity
+import "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol";
+
+function mintWhitelist(bytes32[] calldata proof) public {
+    require(MerkleProof.verify(proof, merkleRoot, keccak256(abi.encodePacked(msg.sender))), "Not whitelisted");
+}
