@@ -590,3 +590,13 @@ contract SimpleGovernance {
 ```solidity
 // Usuario lockea tokens por tiempo
 // Recibe poder de voto proporcional al tiempo locked
+
+### Flash Loan básico
+
+```solidity
+function flashLoan(uint256 amount, address target) public {
+    uint256 balanceBefore = token.balanceOf(address(this));
+    token.transfer(target, amount);
+    // ejecutar lógica en target
+    require(token.balanceOf(address(this)) >= balanceBefore + fee, "Flash loan not repaid");
+}
