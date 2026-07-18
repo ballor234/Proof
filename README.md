@@ -584,3 +584,9 @@ contract SimpleGovernance {
         uint256 endTime;
     }
 }
+
+### Vote Escrowed Token (veToken)
+
+```solidity
+// Usuario lockea tokens por tiempo
+// Recibe poder de voto proporcional al tiempo locked
