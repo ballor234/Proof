@@ -618,3 +618,13 @@ function borrow(uint256 amount) public {
 ### Opciones básicas (call/put)
 
 Contrato que permite comprar el derecho a comprar/vender un asset a un precio fijo en el futuro.
+
+### Prediction Market básico
+
+```solidity
+mapping(uint256 => uint256) public yesVotes;
+mapping(uint256 => uint256) public noVotes;
+
+function vote(uint256 marketId, bool prediction) public {
+    // lógica de voto con tokens
+}
