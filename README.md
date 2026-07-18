@@ -561,3 +561,11 @@ contract MyNFT is ERC721, ERC2981 {
 Permite actualizar la lógica del contrato sin perder el estado.
 
 Usando OpenZeppelin upgrades.
+
+### Cross-chain con LayerZero o Axelar
+
+```solidity
+// Ejemplo básico con LayerZero
+function sendCrossChain(...) public payable {
+    // enviar mensaje a otra chain
+}
