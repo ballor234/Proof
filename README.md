@@ -555,3 +555,9 @@ contract MyNFT is ERC721, ERC2981 {
         return (royaltyReceiver, (salePrice * 5) / 100); // 5%
     }
 }
+
+### Patrón Upgradeable (UUPS)
+
+Permite actualizar la lógica del contrato sin perder el estado.
+
+Usando OpenZeppelin upgrades.
