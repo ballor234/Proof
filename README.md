@@ -628,3 +628,13 @@ mapping(uint256 => uint256) public noVotes;
 function vote(uint256 marketId, bool prediction) public {
     // lógica de voto con tokens
 }
+
+### Insurance pool básico
+
+```solidity
+mapping(address => uint256) public coverage;
+
+function buyCoverage(uint256 amount) public payable {
+    // pagar premium
+    coverage[msg.sender] += amount;
+}
