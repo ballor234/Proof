@@ -638,3 +638,16 @@ function buyCoverage(uint256 amount) public payable {
     // pagar premium
     coverage[msg.sender] += amount;
 }
+
+### Yield Optimizer básico
+
+```solidity
+contract YieldOptimizer {
+    function deposit(uint256 amount) public {
+        // deposita en el mejor vault actual
+    }
+
+    function harvest() public {
+        // reclama rewards y reinvierte
+    }
+}
