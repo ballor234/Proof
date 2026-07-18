@@ -512,3 +512,17 @@ function setCharityWallet(address _wallet) public onlyOwner {
 }
 
  // parte de la tax va a charityWallet
+
+### Blacklist básico
+
+```solidity
+mapping(address => bool) public isBlacklisted;
+
+function blacklist(address account) public onlyOwner {
+    isBlacklisted[account] = true;
+}
+
+modifier notBlacklisted(address account) {
+    require(!isBlacklisted[account], "Blacklisted");
+    _;
+}
