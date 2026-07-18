@@ -614,3 +614,7 @@ function supply(uint256 amount) public {
 function borrow(uint256 amount) public {
     // lógica con collateral
 }
+
+### Opciones básicas (call/put)
+
+Contrato que permite comprar el derecho a comprar/vender un asset a un precio fijo en el futuro.
