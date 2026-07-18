@@ -501,3 +501,14 @@ function buyback() public {
     uint256 contractBalance = address(this).balance;
     // swap ETH por token y burn o distribute
 }
+
+### Charity / Donation wallet
+
+```solidity
+address public charityWallet;
+
+function setCharityWallet(address _wallet) public onlyOwner {
+    charityWallet = _wallet;
+}
+
+ // parte de la tax va a charityWallet
