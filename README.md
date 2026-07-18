@@ -600,3 +600,17 @@ function flashLoan(uint256 amount, address target) public {
     // ejecutar lógica en target
     require(token.balanceOf(address(this)) >= balanceBefore + fee, "Flash loan not repaid");
 }
+
+### Lending básico
+
+```solidity
+mapping(address => uint256) public supplied;
+
+function supply(uint256 amount) public {
+    token.transferFrom(msg.sender, address(this), amount);
+    supplied[msg.sender] += amount;
+}
+
+function borrow(uint256 amount) public {
+    // lógica con collateral
+}
