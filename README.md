@@ -493,3 +493,11 @@ function _transfer(...) {
     uint256 tax = amount * currentTax / 100;
     // apply tax
 }
+
+### Mecanismo de buyback
+
+```solidity
+function buyback() public {
+    uint256 contractBalance = address(this).balance;
+    // swap ETH por token y burn o distribute
+}
