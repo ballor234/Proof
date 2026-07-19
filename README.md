@@ -747,3 +747,14 @@ contract FractionalNFT {
         // lógica de fracciones
     }
 }
+
+### DAO Treasury básico
+
+```solidity
+contract DAOTreasury {
+    mapping(address => bool) public members;
+
+    function proposeSpend(address to, uint256 amount) public onlyMember {
+        // propuesta
+    }
+}
