@@ -655,3 +655,14 @@ contract YieldOptimizer {
 ### Perpetual futures básico
 
 Contrato que permite posiciones long/short con leverage sin fecha de expiración.
+
+### Social features on-chain
+
+```solidity
+mapping(address => string) public profileName;
+mapping(address => string) public status;
+
+function updateProfile(string memory name, string memory status) public {
+    profileName[msg.sender] = name;
+    // ...
+}
