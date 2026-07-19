@@ -723,3 +723,15 @@ function bid() public payable {
     highestBid = msg.value;
     highestBidder = msg.sender;
 }
+
+### Lending Pool básico
+
+```solidity
+mapping(address => uint256) public supplied;
+uint256 public totalSupply;
+
+function supply(uint256 amount) public {
+    token.transferFrom(msg.sender, address(this), amount);
+    supplied[msg.sender] += amount;
+    totalSupply += amount;
+}
