@@ -710,3 +710,16 @@ struct Milestone {
 function releaseMilestone(uint256 id) public {
     // solo si se cumple la condición
 }
+
+### Subasta simple
+
+```solidity
+uint256 public highestBid;
+address public highestBidder;
+
+function bid() public payable {
+    require(msg.value > highestBid, "Bid too low");
+    // reembolsar anterior
+    highestBid = msg.value;
+    highestBidder = msg.sender;
+}
