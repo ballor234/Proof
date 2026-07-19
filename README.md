@@ -735,3 +735,15 @@ function supply(uint256 amount) public {
     supplied[msg.sender] += amount;
     totalSupply += amount;
 }
+
+### Fractional NFT
+
+```solidity
+contract FractionalNFT {
+    uint256 public totalShares;
+    mapping(address => uint256) public shares;
+
+    function buyShares(uint256 amount) public payable {
+        // lógica de fracciones
+    }
+}
