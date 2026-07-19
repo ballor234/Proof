@@ -677,3 +677,10 @@ function claimReferralReward() public {
     referralRewards[msg.sender] = 0;
     token.transfer(msg.sender, reward);
 }
+
+### Dynamic NFT
+
+```solidity
+function updateMetadata(uint256 tokenId, string memory newUri) public {
+    // actualizar metadata on-chain o pointer
+}
