@@ -666,3 +666,14 @@ function updateProfile(string memory name, string memory status) public {
     profileName[msg.sender] = name;
     // ...
 }
+
+### Referral rewards
+
+```solidity
+mapping(address => uint256) public referralRewards;
+
+function claimReferralReward() public {
+    uint256 reward = referralRewards[msg.sender];
+    referralRewards[msg.sender] = 0;
+    token.transfer(msg.sender, reward);
+}
