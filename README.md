@@ -758,3 +758,14 @@ contract DAOTreasury {
         // propuesta
     }
 }
+
+### Item de juego on-chain
+
+```solidity
+contract GameItem is ERC721 {
+    mapping(uint256 => uint256) public itemLevel;
+
+    function levelUp(uint256 tokenId) public {
+        itemLevel[tokenId]++;
+    }
+}
