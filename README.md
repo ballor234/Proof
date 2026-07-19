@@ -684,3 +684,16 @@ function claimReferralReward() public {
 function updateMetadata(uint256 tokenId, string memory newUri) public {
     // actualizar metadata on-chain o pointer
 }
+
+### Escrow básico
+
+```solidity
+contract Escrow {
+    address public buyer;
+    address public seller;
+    uint256 public amount;
+
+    function release() public {
+        // liberar fondos cuando se cumplan condiciones
+    }
+}
