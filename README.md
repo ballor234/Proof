@@ -651,3 +651,7 @@ contract YieldOptimizer {
         // reclama rewards y reinvierte
     }
 }
+
+### Perpetual futures básico
+
+Contrato que permite posiciones long/short con leverage sin fecha de expiración.
