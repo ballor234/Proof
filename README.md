@@ -769,3 +769,14 @@ contract GameItem is ERC721 {
         itemLevel[tokenId]++;
     }
 }
+
+### Leaderboard on-chain
+
+```solidity
+mapping(address => uint256) public scores;
+address[] public topPlayers;
+
+function updateScore(uint256 newScore) public {
+    scores[msg.sender] = newScore;
+    // actualizar ranking
+}
