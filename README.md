@@ -697,3 +697,16 @@ contract Escrow {
         // liberar fondos cuando se cumplan condiciones
     }
 }
+
+### Pagos por milestones
+
+```solidity
+struct Milestone {
+    string description;
+    uint256 amount;
+    bool paid;
+}
+
+function releaseMilestone(uint256 id) public {
+    // solo si se cumple la condición
+}
