@@ -826,3 +826,12 @@ modifier whenNotPaused() {
 function pause() public onlyOwner {
     paused = true;
 }
+
+### Withdraw All (retirar todo)
+
+```solidity
+function withdrawAll() public {
+    uint256 amount = balances[msg.sender];
+    balances[msg.sender] = 0;
+    token.transfer(msg.sender, amount);
+}
