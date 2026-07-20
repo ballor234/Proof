@@ -930,3 +930,10 @@ function stakeNFT(uint256 tokenId) public {
 function _transfer(address from, address to, uint256 tokenId) internal override {
     revert("Soulbound: non-transferable");
 }
+
+### Soulbound Token (no transferible)
+
+```solidity
+function _transfer(address from, address to, uint256 tokenId) internal override {
+    revert("Soulbound: non-transferable");
+}
