@@ -855,3 +855,17 @@ mapping(address => uint8) public referralTier;
 function upgradeTier() public {
     // lógica de subir de nivel según referidos
 }
+
+### Deposit y Withdraw básico
+
+```solidity
+function deposit(uint256 amount) public {
+    token.transferFrom(msg.sender, address(this), amount);
+    balances[msg.sender] += amount;
+}
+
+function withdraw(uint256 amount) public {
+    require(balances[msg.sender] >= amount, "Insufficient balance");
+    balances[msg.sender] -= amount;
+    token.transfer(msg.sender, amount);
+}
