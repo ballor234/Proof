@@ -896,3 +896,13 @@ function compound() public {
     pendingRewards[msg.sender] = 0;
     // reinvertir el reward automáticamente
 }
+
+### Lock Period
+
+```solidity
+uint256 public lockDuration = 30 days;
+
+function deposit(uint256 amount) public {
+    deposits[msg.sender] = block.timestamp + lockDuration;
+    // ...
+}
