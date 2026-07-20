@@ -846,3 +846,12 @@ function claim() public {
     claimable[msg.sender] = 0;
     token.transfer(msg.sender, reward);
 }
+
+### Referral Tiers
+
+```solidity
+mapping(address => uint8) public referralTier;
+
+function upgradeTier() public {
+    // lógica de subir de nivel según referidos
+}
