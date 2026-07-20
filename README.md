@@ -790,3 +790,16 @@ function generateRandom() public returns (uint256) {
     seed = uint256(keccak256(abi.encodePacked(block.timestamp, msg.sender, seed)));
     return seed % 100;
 }
+
+### Vesting Schedule
+
+```solidity
+struct VestingSchedule {
+    uint256 totalAmount;
+    uint256 startTime;
+    uint256 duration;
+}
+
+function release() public {
+    // calcular cantidad liberada según tiempo
+}
