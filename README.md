@@ -803,3 +803,12 @@ struct VestingSchedule {
 function release() public {
     // calcular cantidad liberada según tiempo
 }
+
+### Función claim (reclamo de tokens)
+
+```solidity
+function claim() public {
+    uint256 amount = pendingRewards[msg.sender];
+    pendingRewards[msg.sender] = 0;
+    token.transfer(msg.sender, amount);
+}
