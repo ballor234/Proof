@@ -937,3 +937,10 @@ function _transfer(address from, address to, uint256 tokenId) internal override 
 function _transfer(address from, address to, uint256 tokenId) internal override {
     revert("Soulbound: non-transferable");
 }
+
+### Usos de Soulbound Tokens
+
+- Badges de logros
+- Identidad on-chain
+- Acceso a comunidades
+- Credenciales
