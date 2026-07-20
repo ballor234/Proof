@@ -887,3 +887,12 @@ function harvest() public {
     pendingRewards[msg.sender] = 0;
     rewardToken.transfer(msg.sender, reward);
 }
+
+### Compound Function
+
+```solidity
+function compound() public {
+    uint256 reward = pendingRewards[msg.sender];
+    pendingRewards[msg.sender] = 0;
+    // reinvertir el reward automáticamente
+}
