@@ -835,3 +835,14 @@ function withdrawAll() public {
     balances[msg.sender] = 0;
     token.transfer(msg.sender, amount);
 }
+
+### Claimable Rewards
+
+```solidity
+mapping(address => uint256) public claimable;
+
+function claim() public {
+    uint256 reward = claimable[msg.sender];
+    claimable[msg.sender] = 0;
+    token.transfer(msg.sender, reward);
+}
