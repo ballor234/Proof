@@ -878,3 +878,12 @@ function deposit(uint256 amount) public {
     token.transferFrom(msg.sender, address(this), amount);
     // fee va a treasury o rewards
 }
+
+### Harvest Function
+
+```solidity
+function harvest() public {
+    uint256 reward = pendingRewards[msg.sender];
+    pendingRewards[msg.sender] = 0;
+    rewardToken.transfer(msg.sender, reward);
+}
