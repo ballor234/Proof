@@ -944,3 +944,13 @@ function _transfer(address from, address to, uint256 tokenId) internal override 
 - Identidad on-chain
 - Acceso a comunidades
 - Credenciales
+
+### AccessControl Roles
+
+```solidity
+bytes32 public constant ADMIN_ROLE = keccak256("ADMIN_ROLE");
+bytes32 public constant OPERATOR_ROLE = keccak256("OPERATOR_ROLE");
+
+function grantRole(bytes32 role, address account) public onlyRole(DEFAULT_ADMIN_ROLE) {
+    _grantRole(role, account);
+}
