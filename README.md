@@ -812,3 +812,17 @@ function claim() public {
     pendingRewards[msg.sender] = 0;
     token.transfer(msg.sender, amount);
 }
+
+### Pause Functionality
+
+```solidity
+bool public paused;
+
+modifier whenNotPaused() {
+    require(!paused, "Contract paused");
+    _;
+}
+
+function pause() public onlyOwner {
+    paused = true;
+}
