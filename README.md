@@ -915,3 +915,11 @@ uint256 public boostMultiplier = 150; // 1.5x
 function calculateRewards(address user) public view returns (uint256) {
     return baseRewards[user] * boostMultiplier / 100;
 }
+
+### Staking de NFTs
+
+```solidity
+function stakeNFT(uint256 tokenId) public {
+    nft.transferFrom(msg.sender, address(this), tokenId);
+    stakedNFTs[msg.sender].push(tokenId);
+}
