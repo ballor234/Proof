@@ -780,3 +780,13 @@ function updateScore(uint256 newScore) public {
     scores[msg.sender] = newScore;
     // actualizar ranking
 }
+
+### Random Seed básico
+
+```solidity
+uint256 private seed;
+
+function generateRandom() public returns (uint256) {
+    seed = uint256(keccak256(abi.encodePacked(block.timestamp, msg.sender, seed)));
+    return seed % 100;
+}
