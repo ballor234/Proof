@@ -869,3 +869,12 @@ function withdraw(uint256 amount) public {
     balances[msg.sender] -= amount;
     token.transfer(msg.sender, amount);
 }
+
+### Fee on Deposit
+
+```solidity
+function deposit(uint256 amount) public {
+    uint256 fee = amount * 2 / 100; // 2% fee
+    token.transferFrom(msg.sender, address(this), amount);
+    // fee va a treasury o rewards
+}
