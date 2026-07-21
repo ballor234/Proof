@@ -1001,3 +1001,14 @@ struct Proposal {
 function createProposal(string memory description) public {
     // crear propuesta
 }
+
+### Revenue Share básico
+
+```solidity
+mapping(address => uint256) public shares;
+
+function distributeRevenue() public {
+    uint256 revenue = address(this).balance;
+    for each holder:
+        payable(holder).transfer(revenue * shares[holder] / totalShares);
+}
