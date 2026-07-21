@@ -1052,3 +1052,13 @@ Player[] public leaderboard;
 function updateLeaderboard(address player, uint256 score) public {
     // actualizar ranking
 }
+
+### Quest System básico
+
+```solidity
+mapping(address => mapping(uint256 => bool)) public completedQuests;
+
+function completeQuest(uint256 questId) public {
+    // verificar condiciones
+    completedQuests[msg.sender][questId] = true;
+}
