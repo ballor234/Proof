@@ -954,3 +954,9 @@ bytes32 public constant OPERATOR_ROLE = keccak256("OPERATOR_ROLE");
 function grantRole(bytes32 role, address account) public onlyRole(DEFAULT_ADMIN_ROLE) {
     _grantRole(role, account);
 }
+
+### Patrón Proxy (UUPS o Transparent)
+
+Permite actualizar la lógica del contrato sin perder los datos (estado).
+
+Muy usado en proyectos grandes.
