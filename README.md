@@ -1023,3 +1023,18 @@ function claimAirdrop() public {
     claimed[msg.sender] = true;
     token.transfer(msg.sender, amount);
 }
+
+### Loyalty Points System
+
+```solidity
+mapping(address => uint256) public points;
+
+function earnPoints(uint256 amount) public {
+    points[msg.sender] += amount;
+}
+
+function redeemPoints(uint256 amount) public {
+    require(points[msg.sender] >= amount, "Not enough points");
+    points[msg.sender] -= amount;
+    // dar reward
+}
