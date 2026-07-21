@@ -987,3 +987,17 @@ contract SoulboundBadge is ERC721 {
 function sendToOtherChain(uint256 amount, uint16 targetChain) public {
     // lógica con LayerZero o Axelar
 }
+
+### Propuesta de governance básica
+
+```solidity
+struct Proposal {
+    string description;
+    uint256 forVotes;
+    uint256 againstVotes;
+    uint256 endTime;
+}
+
+function createProposal(string memory description) public {
+    // crear propuesta
+}
