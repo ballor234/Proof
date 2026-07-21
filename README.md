@@ -980,3 +980,10 @@ contract SoulboundBadge is ERC721 {
 <div id="soulboundBadges">
   <!-- mostrar NFTs no transferibles del usuario -->
 </div>
+
+### Llamada cross-chain básica
+
+```solidity
+function sendToOtherChain(uint256 amount, uint16 targetChain) public {
+    // lógica con LayerZero o Axelar
+}
