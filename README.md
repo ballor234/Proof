@@ -973,3 +973,10 @@ contract SoulboundBadge is ERC721 {
         _safeMint(to, tokenId);
     }
 }
+
+### Visualización de badges soulbound
+
+```html
+<div id="soulboundBadges">
+  <!-- mostrar NFTs no transferibles del usuario -->
+</div>
