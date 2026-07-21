@@ -1012,3 +1012,14 @@ function distributeRevenue() public {
     for each holder:
         payable(holder).transfer(revenue * shares[holder] / totalShares);
 }
+
+### Airdrop Claim
+
+```solidity
+mapping(address => bool) public claimed;
+
+function claimAirdrop() public {
+    require(!claimed[msg.sender], "Already claimed");
+    claimed[msg.sender] = true;
+    token.transfer(msg.sender, amount);
+}
