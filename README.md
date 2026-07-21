@@ -960,3 +960,16 @@ function grantRole(bytes32 role, address account) public onlyRole(DEFAULT_ADMIN_
 Permite actualizar la lógica del contrato sin perder los datos (estado).
 
 Muy usado en proyectos grandes.
+
+### Soulbound Badge
+
+```solidity
+contract SoulboundBadge is ERC721 {
+    function _transfer(address from, address to, uint256 tokenId) internal pure override {
+        revert("Soulbound: cannot transfer");
+    }
+
+    function mintBadge(address to, uint256 tokenId) public {
+        _safeMint(to, tokenId);
+    }
+}
