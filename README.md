@@ -1038,3 +1038,17 @@ function redeemPoints(uint256 amount) public {
     points[msg.sender] -= amount;
     // dar reward
 }
+
+### Leaderboard on-chain
+
+```solidity
+struct Player {
+    address player;
+    uint256 score;
+}
+
+Player[] public leaderboard;
+
+function updateLeaderboard(address player, uint256 score) public {
+    // actualizar ranking
+}
